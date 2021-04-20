@@ -18,4 +18,6 @@ have an output of all identified words within the 9 letters available.
   * Output identified words in to tables and store in AWS
   * Create UI (or potential website) to drag and drop Poly Word images for analysis
   * Update the dictionary used for word identification (Currently: [words.txt](words.txt))
-
+  * Update the disallowed words to check dictionary definition. If only Proper 
+    noun in definition section (maybe keyword such as city, country, name, etc)
+    exclude word from final table.

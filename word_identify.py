@@ -2,7 +2,7 @@
 ### 19.03.2021
 
 from collections import Counter
-import re, os
+# import os
 
 
 def table_builder(id_words):
@@ -16,9 +16,9 @@ def rules_trim(id_words):
         for line in file:
             line = line.strip()
             line = line.lower()
-            for idx,item in enumerate(id_words):
+            for idx, item in enumerate(id_words):
                 if line == item:
-                    id_words[idx] == (item, 'possible invalid')
+                    id_words[idx] = (item, 'possible invalid')
             
         print(id_words)
         print(len(id_words))
