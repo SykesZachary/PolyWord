@@ -48,10 +48,10 @@ def poly_words(key_word, peripheral):
                     else:
                         continue
                 if set(potential_word).issuperset(set(line)):
-                    if key_word in set(potential_word):
+                    if key_word in set(potential_word) and line not in word_match:
                         word_match.append(line)
                             
-    file.close() 
+    file.close()
     rules_trim(word_match)
 
 
