@@ -20,4 +20,4 @@ have an output of all identified words within the 9 letters available.
   * Update the dictionary used for word identification (Currently: [words.txt](words.txt))
   * Update the disallowed words to check dictionary definition. If only Proper 
     noun in definition section (maybe keyword such as city, country, name, etc)
-    exclude word from final table.
+    exclude word from final table
