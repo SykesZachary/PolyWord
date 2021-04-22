@@ -16,9 +16,15 @@ def rules_trim(id_words):
         for line in file:
             line = line.strip()
             line = line.lower()
+
             for idx,item in enumerate(id_words):
                 if line == item:
-                    id_words[idx] == (item, 'possible invalid')
+                   id_words[idx] = (item, 'possible invalid')
+
+            for idx, item in enumerate(id_words):
+                if line == item:
+                    id_words[idx] = (item, 'possible invalid')
+
             
         print(id_words)
         print(len(id_words))
@@ -48,10 +54,15 @@ def poly_words(key_word, peripheral):
                     else:
                         continue
                 if set(potential_word).issuperset(set(line)):
+
                     if key_word in set(potential_word):
                         word_match.append(line)
                             
-    file.close() 
+    file.close()
+
+            if key_word in set(potential_word) and line not in word_match:
+                word_match.append(line)
+
     rules_trim(word_match)
 
 
